@@ -3,10 +3,10 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.myname.views.pages;
+module apps.eim.views.pages;
 
 public {
-  import apps.myname.views.pages.headers;
-  import apps.myname.views.pages.bodies;
-  import apps.myname.views.pages.footers;
+  import apps.eim.views.pages.headers;
+  import apps.eim.views.pages.bodies;
+  import apps.eim.views.pages.footers;
 }
