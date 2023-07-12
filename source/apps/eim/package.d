@@ -3,7 +3,7 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.myname;
+module apps.eim;
 
 mixin(ImportPhobos!());
 
@@ -23,16 +23,16 @@ public import uim.servers;
 public import langs.javascript;
 
 public {
-  import apps.myname.controllers;
-  import apps.myname.helpers;
-  import apps.myname.routers;
-  import apps.myname.tests;
-  import apps.myname.views;
+  import apps.eim.controllers;
+  import apps.eim.helpers;
+  import apps.eim.routers;
+  import apps.eim.tests;
+  import apps.eim.views;
 }
 
-DApp mynameApp;
+DApp eimApp;
   AppRegistry.register("apps.ecm",  
-    App("mynameApp", "/apps/myname")
+    App("eimApp", "/apps/eim")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
