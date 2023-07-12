@@ -3,19 +3,19 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.myname.controllers.pages.error;
+module apps.eim.controllers.pages.error;
 
-import apps.myname;
+import apps.eim;
 @safe:
 
-class DMYNAMEErrorPageController : DAPPPageController {
-  mixin(ControllerThis!("MYNAMEErrorPageController"));
+class DEIMErrorPageController : DAPPPageController {
+  mixin(ControllerThis!("EIMErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(MYNAMEErrorView(this));
+      .view(EIMErrorView(this));
   }
 }
-mixin(ControllerCalls!("MYNAMEErrorPageController"));
+mixin(ControllerCalls!("EIMErrorPageController"));
