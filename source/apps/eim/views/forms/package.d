@@ -1,7 +1,7 @@
-module apps.myname.views.forms;
+module apps.eim.views.forms;
 
 public {
-  import apps.myname.views.forms.headers;
-  import apps.myname.views.forms.bodies;
-  import apps.myname.views.forms.footers;
+  import apps.eim.views.forms.headers;
+  import apps.eim.views.forms.bodies;
+  import apps.eim.views.forms.footers;
 }
