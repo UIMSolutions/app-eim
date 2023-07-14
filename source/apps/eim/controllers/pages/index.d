@@ -8,14 +8,14 @@ module apps.eim.controllers.pages.index;
 import apps.eim;
 @safe:
 
-class DEIMIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("EIMIndexPageController"));
+class DIndexPageController : DPageController {
+  mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(EIMIndexView(this));
+      .view(IndexView(this));
   }
 }
-mixin(ControllerCalls!("EIMIndexPageController"));
+mixin(ControllerCalls!("IndexPageController"));

@@ -17,10 +17,11 @@ public import uim.html;
 public import uim.oop;
 public import uim.models;
 public import uim.apps;
-public import uim.controls;
 public import uim.servers;
 
 public import langs.javascript;
+
+public import web.controls;
 
 public {
   import apps.eim.controllers;
@@ -30,8 +31,8 @@ public {
   import apps.eim.views;
 }
 
-DApp eimApp;
-  AppRegistry.register("apps.ecm",  
+static this() {
+  AppRegistry.register("apps.eim",  
     App("eimApp", "/apps/eim")
       .importTranslations()
       .addRoutes(
@@ -39,5 +40,4 @@ DApp eimApp;
         Route("/", HTTPMethod.GET, IndexPageController)
       )
     );
-}
 }

@@ -8,15 +8,15 @@ module apps.eim.views.error;
 import apps.eim;
 @safe:
 
-class DEIMErrorView : DView {
-  mixin(ViewThis!("EIMErrorView"));
+class DErrorView : DView {
+  mixin(ViewThis!("ErrorView"));
 
   override void beforeH5(STRINGAA options = null) {
     super.beforeH5(options);
   }
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DEIMErrorView~":DEIMErrorView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DErrorView~":DErrorView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -24,4 +24,4 @@ class DEIMErrorView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("EIMErrorView"));
+mixin(ViewCalls!("ErrorView"));

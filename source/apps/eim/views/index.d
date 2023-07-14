@@ -8,11 +8,11 @@ module apps.eim.views.index;
 import apps.eim;
 @safe:
 
-class DEIMIndexView : DView {
-  mixin(ViewThis!("EIMIndexView"));
+class DIndexView : DView {
+  mixin(ViewThis!("IndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DEIMIndexView~":DEIMIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DIndexView~":DIndexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -20,4 +20,4 @@ class DEIMIndexView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("EIMIndexView"));
+mixin(ViewCalls!("IndexView"));

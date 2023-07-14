@@ -8,14 +8,14 @@ module apps.eim.controllers.pages.error;
 import apps.eim;
 @safe:
 
-class DEIMErrorPageController : DAPPPageController {
-  mixin(ControllerThis!("EIMErrorPageController"));
+class DErrorPageController : DPageController {
+  mixin(ControllerThis!("ErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(EIMErrorView(this));
+      .view(ErrorView(this));
   }
 }
-mixin(ControllerCalls!("EIMErrorPageController"));
+mixin(ControllerCalls!("ErrorPageController"));
