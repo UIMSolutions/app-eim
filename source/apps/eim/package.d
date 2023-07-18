@@ -33,7 +33,7 @@ public {
 
 static this() {
   AppRegistry.register("apps.eim",  
-    App("eimApp", "/apps/eim")
+    App("eimApp", "apps/eim")
       .importTranslations()
       .addRoutes(
         Route("", HTTPMethod.GET, IndexPageController),
