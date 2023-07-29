@@ -7,8 +7,10 @@ module apps.eim;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -32,12 +34,18 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.eim",  
-    App("eimApp", "apps/eim")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  // Create app
+  auto myApp = App("eimApp", "apps/eim");
+  with(myApp) {
+    importTranslations();
+    addControllers([
+      "eim.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("eim.index")),
+      Route("/", HTTPMethod.GET, IndexPageController)
     );
+  }
+
+  AppRegistry.register("apps.eim", myApp);
 }
